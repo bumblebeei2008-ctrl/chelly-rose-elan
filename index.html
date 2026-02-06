@@ -1,103 +1,212 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Chelly Rose Elan</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background: linear-gradient(135deg, #ffe6f0, #fff);
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chelly Rose Elan - My Love</title>
 
-    .card {
-      background: white;
-      max-width: 700px;
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-      text-align: center;
-    }
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
 
-    h1 {
-      color: #d63384;
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
+<style>
+  /* Reset */
+  * { margin:0; padding:0; box-sizing:border-box; }
 
-    h2 {
-      font-weight: normal;
-      color: #555;
-      margin-bottom: 30px;
-    }
+  /* Body */
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #ffe6f0, #fff0f5);
+    color: #333;
+    overflow-x: hidden;
+  }
 
-    p {
-      font-size: 1.1em;
-      line-height: 1.8;
-      margin-bottom: 20px;
-    }
+  /* Floating Hearts */
+  .heart {
+    position: absolute;
+    font-size: 1.5em;
+    color: #ff4d6d;
+    animation: float 6s linear infinite;
+    opacity: 0.8;
+  }
+  @keyframes float {
+    0% { transform: translateY(100vh) translateX(0); opacity:0;}
+    50% { opacity:1;}
+    100% { transform: translateY(-100vh) translateX(50px); opacity:0;}
+  }
 
-    .heart {
-      font-size: 2em;
-      color: #ff4d6d;
-      animation: pulse 1.5s infinite;
-    }
+  /* Hero Section */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position: relative;
+    overflow:hidden;
+  }
+  #hero h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3em;
+    color: #d63384;
+    margin-bottom: 10px;
+  }
+  #hero h2 {
+    font-size: 1.5em;
+    color: #555;
+  }
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
-    }
+  /* Section Styles */
+  section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+  section h2 {
+    font-family: 'Pacifico', cursive;
+    color: #d63384;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align:center;
+  }
+  section p {
+    font-size: 1.1em;
+    line-height:1.8;
+    margin-bottom: 20px;
+  }
 
-    footer {
-      margin-top: 30px;
-      font-size: 0.9em;
-      color: #777;
-    }
-  </style>
+  /* Gallery Flowers */
+  .flowers {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+  }
+  .flower {
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background: radial-gradient(circle at 30% 30%, #ffb6c1, #ff69b4);
+    position: relative;
+    cursor:pointer;
+    transition: transform 0.3s;
+  }
+  .flower:hover { transform: scale(1.2); }
+
+  /* Love Letters */
+  .letter {
+    background:#fff0f5;
+    border-left:5px solid #ff4d6d;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+  }
+
+  /* Footer */
+  footer {
+    text-align:center;
+    padding:40px 20px;
+    color:#777;
+    font-size:0.9em;
+  }
+
+  /* Music Button */
+  #musicBtn {
+    position:fixed;
+    top:20px;
+    right:20px;
+    background:#ff4d6d;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:10px;
+    cursor:pointer;
+    font-family:'Pacifico', cursive;
+  }
+</style>
 </head>
+
 <body>
 
-  <div class="card">
-    <h1>Chelly Rose Elan</h1>
-    <h2>This page is made only for you 🌸</h2>
+<!-- Background Hearts -->
+<script>
+for(let i=0;i<30;i++){
+  let heart=document.createElement('div');
+  heart.className='heart';
+  heart.style.left=Math.random()*100+'vw';
+  heart.style.animationDuration=(4+Math.random()*4)+'s';
+  heart.innerHTML='❤️';
+  document.body.appendChild(heart);
+}
+</script>
 
-    <p>
-      I made this little space just to tell you how special you are to me.
-      Not just because you are beautiful—but because of your heart,
-      your kindness, and the effort you put into everything you do.
-    </p>
+<!-- Music -->
+<audio id="bgMusic" loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+<button id="musicBtn" onclick="toggleMusic()">Play Music 🎵</button>
 
-    <p>
-      I love how creative you are, especially when you make handmade flowers.
-      Every petal you create carries patience, care, and love—
-      just like the way you treat the people around you.
-      Your hard work inspires me more than you know.
-    </p>
+<script>
+function toggleMusic(){
+  let music=document.getElementById('bgMusic');
+  let btn=document.getElementById('musicBtn');
+  if(music.paused){ music.play(); btn.innerText='Pause Music 🎵';}
+  else{ music.pause(); btn.innerText='Play Music 🎵';}
+}
+</script>
 
-    <p>
-      You are gentle, genuine, and rare.
-      The kind of person who makes ordinary days feel warm and meaningful.
-      Talking to you makes me feel calm, motivated, and happy.
-    </p>
+<!-- Hero Section -->
+<section id="hero">
+  <h1>Chelly Rose Elan 💖</h1>
+  <h2>You are my everything, my love, my happiness 🥰</h2>
+</section>
 
-    <p>
-      This website may be simple,
-      but it’s made from my heart—
-      just like my feelings for you.
-    </p>
+<!-- About Section -->
+<section id="about">
+  <h2>About You 🌸</h2>
+  <p>Bebiii, you are beautiful inside and out. Your smile, your heart, your creativity—it all amazes me. You are so kind, soft-hearted, gentle, and loving. I love how you make handmade flowers, your art inspires me every single day. You’re my motivation, my sunshine, my everything 💛</p>
+  <p>Every little thing about you makes me fall for you again and again. Your laughter, your care, and even your tiny quirks—they all make you perfect for me. You are truly one of a kind, Chelly Rose, and I promise to treasure you forever 🫶</p>
+</section>
 
-    <div class="heart">❤</div>
-
-    <footer>
-      Made with love, patience, and sincerity — just for you.
-    </footer>
+<!-- Gallery Section -->
+<section id="gallery">
+  <h2>Flowers & Love 🌹</h2>
+  <p>These flowers are inspired by your art and creativity. Click on each flower to feel the love 🥰</p>
+  <div class="flowers">
+    <div class="flower" title="For my beautiful Chelly 🌸"></div>
+    <div class="flower" title="Your creativity inspires me 💛"></div>
+    <div class="flower" title="Every petal reminds me of you 🥺"></div>
+    <div class="flower" title="I love you endlessly ❤️"></div>
+    <div class="flower" title="You are my happiness 💖"></div>
   </div>
+</section>
+
+<!-- Love Letters Section -->
+<section id="letters">
+  <h2>Love Letters 💌</h2>
+  <div class="letter">
+    <p>My beloved Chelly Rose, I love you more than words can ever describe. Every moment with you feels magical. Your smile, your kindness, your creativity—it all fills my heart with happiness. I promise to always cherish you and support you in everything you do. You are my heart, my soul, and my forever 🥰</p>
+  </div>
+  <div class="letter">
+    <p>Bebiii, you are my inspiration and my motivation. Thinking of you makes every day brighter. Your handmade flowers, your beautiful smile, your caring heart—it all makes me love you more than I could have imagined. I can’t wait for all our dreams to come true together 💛</p>
+  </div>
+  <div class="letter">
+    <p>Every time I see you, I fall for you again and again. You are my sunshine, my happiness, my reason to keep going. I promise to never let you feel alone, to always be yours, and to love you more every single day 💖</p>
+  </div>
+</section>
+
+<!-- Future / Dreams Section -->
+<section id="future">
+  <h2>Our Future 🌟</h2>
+  <p>I dream of a life where we are always together, supporting each other, laughing together, and building our dreams hand in hand. Someday, in God’s perfect timing, we will meet and live our life together like we always imagined 🥺💛</p>
+  <p>We will create beautiful memories, grow stronger together, and always remind each other how much we love one another. You are my future, my wifu, my baby girl, and my everything 💕</p>
+</section>
+
+<!-- Footer -->
+<footer>
+  Made with love 💛 for <b>Chelly Rose Elan</b> — my inspiration, my happiness, my everything 🥰
+</footer>
 
 </body>
-</html>
+  </html>
