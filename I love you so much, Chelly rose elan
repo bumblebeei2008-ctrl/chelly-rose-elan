@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chelly Rose Elan</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(135deg, #ffe6f0, #fff);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      background: white;
+      max-width: 700px;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h1 {
+      color: #d63384;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-weight: normal;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .heart {
+      font-size: 2em;
+      color: #ff4d6d;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Chelly Rose Elan</h1>
+    <h2>This page is made only for you 🌸</h2>
+
+    <p>
+      I made this little space just to tell you how special you are to me.
+      Not just because you are beautiful—but because of your heart,
+      your kindness, and the effort you put into everything you do.
+    </p>
+
+    <p>
+      I love how creative you are, especially when you make handmade flowers.
+      Every petal you create carries patience, care, and love—
+      just like the way you treat the people around you.
+      Your hard work inspires me more than you know.
+    </p>
+
+    <p>
+      You are gentle, genuine, and rare.
+      The kind of person who makes ordinary days feel warm and meaningful.
+      Talking to you makes me feel calm, motivated, and happy.
+    </p>
+
+    <p>
+      This website may be simple,
+      but it’s made from my heart—
+      just like my feelings for you.
+    </p>
+
+    <div class="heart">❤</div>
+
+    <footer>
+      Made with love, patience, and sincerity — just for you.
+    </footer>
+  </div>
+
+</body>
+</html>
