@@ -1,210 +1,188 @@
-          <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Chelly Rose Khan Babar 💖</title>
+<title>Good Afternoon, My Chelly Rose 🌹💖</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Georgia', serif;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    color: white;
-    scroll-behavior: smooth;
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500;700&display=swap');
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fbc2eb);
+    overflow-x:hidden;
+    scroll-behavior:smooth;
+    color:#333;
 }
 
-nav {
-    position: fixed;
-    width: 100%;
-    background: rgba(0,0,0,0.6);
-    padding: 10px;
-    text-align: center;
-    z-index: 1000;
+/* BIG TITLE */
+.big-title{
+    font-family:'Pacifico',cursive;
+    font-size:3.5em;
+    color:#e63946;
+    text-align:center;
+    margin-bottom:20px;
+    text-shadow:0 0 15px #ffb6b9;
 }
 
-nav a {
-    color: #ff9ecf;
-    margin: 10px;
-    text-decoration: none;
-    font-size: 14px;
+.section{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:60px 20px;
+    text-align:center;
 }
 
-section {
-    min-height: 100vh;
-    padding: 80px 20px;
-    text-align: center;
+p{
+    max-width:750px;
+    font-size:1.3em;
+    line-height:1.8em;
 }
 
-h1 {
-    font-size: 40px;
-    color: #ff9ecf;
+.highlight{
+    color:#d62828;
+    font-weight:bold;
 }
 
-p {
-    max-width: 700px;
-    margin: auto;
-    font-size: 18px;
-    line-height: 1.7;
+button{
+    padding:14px 28px;
+    font-size:1.2em;
+    border:none;
+    border-radius:25px;
+    background:#ff6b6b;
+    color:white;
+    cursor:pointer;
+    margin-top:25px;
+    transition:0.3s;
+}
+button:hover{
+    background:#e63946;
+    transform:scale(1.1);
 }
 
-.heart {
-    font-size: 40px;
-    animation: pulse 1.5s infinite;
+/* Falling hearts */
+.heart{
+    position:absolute;
+    width:18px;
+    height:18px;
+    background:red;
+    transform:rotate(45deg);
+    top:-10px;
+    animation:fall linear infinite;
+}
+.heart::before,.heart::after{
+    content:"";
+    position:absolute;
+    width:18px;
+    height:18px;
+    background:red;
+    border-radius:50%;
+}
+.heart::before{top:-10px;left:0;}
+.heart::after{left:10px;top:0;}
+@keyframes fall{
+    0%{transform:translateY(0) rotate(45deg);opacity:1;}
+    100%{transform:translateY(110vh) rotate(405deg);opacity:0;}
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1); }
+footer{
+    text-align:center;
+    padding:20px;
+    font-size:0.9em;
+    background:rgba(255,255,255,0.4);
 }
 
-button {
-    padding: 10px 20px;
-    border: none;
-    background: #ff4da6;
-    color: white;
-    cursor: pointer;
-    border-radius: 20px;
-    margin-top: 20px;
-}
-
-footer {
-    padding: 20px;
-    background: black;
+/* Responsive */
+@media(max-width:480px){
+    .big-title{font-size:2.4em;}
+    p{font-size:1.1em;}
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-<a href="#1">1</a>
-<a href="#2">2</a>
-<a href="#3">3</a>
-<a href="#4">4</a>
-<a href="#5">5</a>
-<a href="#6">6</a>
-<a href="#7">7</a>
-<a href="#8">8</a>
-<a href="#9">9</a>
-<a href="#10">10</a>
-<a href="#11">11</a>
-<a href="#12">12</a>
-<a href="#13">13</a>
-<a href="#14">14</a>
-<a href="#15">15</a>
-<a href="#16">16</a>
-<a href="#17">17</a>
-<a href="#18">18</a>
-<a href="#19">19</a>
-<a href="#20">20</a>
-</nav>
+<script>
+for(let i=0;i<60;i++){
+    let heart=document.createElement("div");
+    heart.className="heart";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.animationDuration=(Math.random()*5+5)+"s";
+    heart.style.backgroundColor=["#ff6b6b","#ffb6b9","#ff8fa3","#fcb9b2"][Math.floor(Math.random()*4)];
+    document.body.appendChild(heart);
+}
+</script>
 
-<section id="1">
-<h1>Happy Valentine’s Day Chelly Rose 🌹</h1>
-<p>You are not just a girl in my life. You are my peace, my chaos, my happiness, my obsession in the most beautiful way.</p>
-<div class="heart">❤️</div>
-</section>
+<div class="section">
+<h1 class="big-title">Good Afternoon, My Chelly Rose 🌹💖</h1>
 
-<section id="2">
-<h1>Our Story</h1>
-<p>We fix problems together. We overthink. We cry. We laugh. And still, we choose each other again and again.</p>
-</section>
+<p>
+My beautiful girl… I hope you're smiling right now because you deserve the biggest smile in the world. 
+Even when you’re tired, even when your day feels heavy… you are still shining so bright. ✨
+</p>
 
-<section id="3">
-<h1>You Are My Comfort</h1>
-<p>You once said talking to me makes your problems disappear. Just know — your voice calms my storms too.</p>
-</section>
+<p>
+I see how hard you're working. I see your effort. I see your dedication. 
+And I just want you to know… <span class="highlight">your efforts are not invisible.</span> 
+They matter. YOU matter.
+</p>
 
-<section id="4">
-<h1>Dark Romance</h1>
-<p>If the world ever turned against us, I would still choose you in the dark. Even in silence, even in chaos — I am yours.</p>
-</section>
+<p>
+You’re strong, responsible, loving, and so precious. 
+Sometimes you don’t even realize how amazing you are… but Daddy sees it all. 
+<span class="highlight">And Daddy is so, so proud of you.</span> 🥹💗
+</p>
 
-<section id="5">
-<h1>Your Smile</h1>
-<p>Your morning pictures? Dangerous. That white dress? Unfair. You glow without trying.</p>
-</section>
+<p>
+If you’re feeling tired right now, come here… virtual hug first 🤗 
+Now imagine me gently holding your face and telling you —
+“You’re doing so well, baby. Keep going. I believe in you.”
+</p>
 
-<section id="6">
-<h1>Jealous?</h1>
-<p>Let them confess. Let them admire. At the end of the day, you come back to me.</p>
-</section>
+<p>
+And also… how can someone work so hard and still be THIS cute?? 
+Like excuse me miss Chelly Rose, why are you glowing like that?? 😏💕
+</p>
 
-<section id="7">
-<h1>Your Tears</h1>
-<p>You cried thinking I didn’t love you. I never want you fighting fears alone again.</p>
-</section>
+<button onclick="playVoice()">Play Special Voice Message 💌</button>
 
-<section id="8">
-<h1>Promise</h1>
-<p>I promise honesty. I promise loyalty. I promise to protect your heart.</p>
-</section>
+<audio id="voiceNote">
+<source src="https://cdn.jsdelivr.net/gh/AlleHassan2008-crypto/Aliyah-Maricar-carugda/audio/romantic.mp3" type="audio/mpeg">
+</audio>
 
-<section id="9">
-<h1>Your Body Is Lovely</h1>
-<p>You are beautiful in every way. Graceful. Elegant. Soft and strong at the same time.</p>
-</section>
+</div>
 
-<section id="10">
-<h1>When You Dance</h1>
-<p>When you said “awww” and danced — that was my favorite reaction ever.</p>
-</section>
+<div class="section">
+<h1 class="big-title">Little Reminder From Daddy 💖</h1>
+<p>
+You are loved. You are appreciated. You are admired. 
+And no matter how busy life gets, I will always be here cheering for you. 
+Now drink some water, relax your shoulders, and smile for me. 😌
+</p>
 
-<section id="11">
-<h1>Overthinking Queen</h1>
-<p>Your mind creates stories. But I’ll always be here to rewrite them with truth.</p>
-</section>
-
-<section id="12">
-<h1>Late Night Thoughts</h1>
-<p>Even when you scroll TikTok at 2am, remember someone is thinking about you.</p>
-</section>
-
-<section id="13">
-<h1>College Girl</h1>
-<p>Study hard. Chase dreams. I’ll be cheering for you quietly but proudly.</p>
-</section>
-
-<section id="14">
-<h1>Sunset Memories</h1>
-<p>The clouds you send me? Beautiful. But they look better because you captured them.</p>
-</section>
-
-<section id="15">
-<h1>Funny & Cute</h1>
-<p>You can look funny and still be the most adorable person alive.</p>
-</section>
-
-<section id="16">
-<h1>Comfort</h1>
-<p>You said you’re comfortable with me. That means everything.</p>
-</section>
-
-<section id="17">
-<h1>Confidence</h1>
-<p>I don’t get scared of other guys. Because I trust you.</p>
-</section>
-
-<section id="18">
-<h1>Future</h1>
-<p>I don’t know what tomorrow holds. But I know I want you in it.</p>
-</section>
-
-<section id="19">
-<h1>Valentine Forever</h1>
-<p>Not just today. Every day.</p>
-</section>
-
-<section id="20">
-<h1>My Final Words</h1>
-<p>Chelly Rose Khan Babar… you are not ordinary. You are my everything. Happy Valentine’s Day. ❤️</p>
-<button onclick="alert('I love you, Chelly Rose ❤️')">Click Me</button>
-</section>
+<p>
+Because my Chelly Rose deserves peace, happiness, and endless love. 🌹✨
+</p>
+</div>
 
 <footer>
-Made with love by Alle Hassan 💖
+Made with ❤️ by Daddy (Alle) — Just for Chelly Rose 🌹
+</footer>
+
+<script>
+function playVoice(){
+    document.getElementById("voiceNote").play();
+}
+</script>
+
+</body>
+</html>
+<footer>
+Made by Alle Hassan with love for Aliyah ❤️
 </footer>
 
 </body>
