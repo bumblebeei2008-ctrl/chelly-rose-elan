@@ -24,7 +24,7 @@ body{
     color:#e63946;
     text-align:center;
     margin-bottom:20px;
-    text-shadow:0 0 15px #ffb6b9;
+    text-shadow:0 0 20px #ffb6b9;
 }
 
 .section{
@@ -48,27 +48,25 @@ p{
     font-weight:bold;
 }
 
-button{
-    padding:14px 28px;
-    font-size:1.2em;
-    border:none;
-    border-radius:25px;
-    background:#ff6b6b;
-    color:white;
-    cursor:pointer;
-    margin-top:25px;
-    transition:0.3s;
+.love-big{
+    font-size:4em;
+    font-family:'Pacifico',cursive;
+    color:#ff1744;
+    text-shadow:0 0 25px #ff8fa3;
+    animation:pulse 1.5s infinite;
 }
-button:hover{
-    background:#e63946;
-    transform:scale(1.1);
+
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.1);}
+    100%{transform:scale(1);}
 }
 
 /* Falling hearts */
 .heart{
     position:absolute;
-    width:18px;
-    height:18px;
+    width:20px;
+    height:20px;
     background:red;
     transform:rotate(45deg);
     top:-10px;
@@ -77,13 +75,14 @@ button:hover{
 .heart::before,.heart::after{
     content:"";
     position:absolute;
-    width:18px;
-    height:18px;
+    width:20px;
+    height:20px;
     background:red;
     border-radius:50%;
 }
 .heart::before{top:-10px;left:0;}
 .heart::after{left:10px;top:0;}
+
 @keyframes fall{
     0%{transform:translateY(0) rotate(45deg);opacity:1;}
     100%{transform:translateY(110vh) rotate(405deg);opacity:0;}
@@ -96,9 +95,9 @@ footer{
     background:rgba(255,255,255,0.4);
 }
 
-/* Responsive */
 @media(max-width:480px){
-    .big-title{font-size:2.4em;}
+    .big-title{font-size:2.3em;}
+    .love-big{font-size:2.8em;}
     p{font-size:1.1em;}
 }
 </style>
@@ -107,82 +106,90 @@ footer{
 <body>
 
 <script>
-for(let i=0;i<60;i++){
+// ALOT ALOT ALOT OF HEARTS 😌💖
+for(let i=0;i<150;i++){
     let heart=document.createElement("div");
     heart.className="heart";
     heart.style.left=Math.random()*100+"vw";
-    heart.style.animationDuration=(Math.random()*5+5)+"s";
-    heart.style.backgroundColor=["#ff6b6b","#ffb6b9","#ff8fa3","#fcb9b2"][Math.floor(Math.random()*4)];
+    heart.style.animationDuration=(Math.random()*4+4)+"s";
+    heart.style.backgroundColor=["#ff6b6b","#ff1744","#ff8fa3","#fcb9b2","#ff4d6d"][Math.floor(Math.random()*5)];
     document.body.appendChild(heart);
 }
 </script>
 
+<!-- PAGE 1 -->
 <div class="section">
 <h1 class="big-title">Good Afternoon, My Chelly Rose 🌹💖</h1>
-
-<p>
-My beautiful girl… I hope you're smiling right now because you deserve the biggest smile in the world. 
-Even when you’re tired, even when your day feels heavy… you are still shining so bright. ✨
-</p>
-
-<p>
-I see how hard you're working. I see your effort. I see your dedication. 
-And I just want you to know… <span class="highlight">your efforts are not invisible.</span> 
-They matter. YOU matter.
-</p>
-
-<p>
-You’re strong, responsible, loving, and so precious. 
-Sometimes you don’t even realize how amazing you are… but Daddy sees it all. 
-<span class="highlight">And Daddy is so, so proud of you.</span> 🥹💗
-</p>
-
-<p>
-If you’re feeling tired right now, come here… virtual hug first 🤗 
-Now imagine me gently holding your face and telling you —
-“You’re doing so well, baby. Keep going. I believe in you.”
-</p>
-
-<p>
-And also… how can someone work so hard and still be THIS cute?? 
-Like excuse me miss Chelly Rose, why are you glowing like that?? 😏💕
-</p>
-
-<button onclick="playVoice()">Play Special Voice Message 💌</button>
-
-<audio id="voiceNote">
-<source src="https://cdn.jsdelivr.net/gh/AlleHassan2008-crypto/Aliyah-Maricar-carugda/audio/romantic.mp3" type="audio/mpeg">
-</audio>
-
+<p>My beautiful girl… even if your day feels heavy, you are still shining brighter than the sun.</p>
 </div>
 
+<!-- PAGE 2 -->
 <div class="section">
-<h1 class="big-title">Little Reminder From Daddy 💖</h1>
-<p>
-You are loved. You are appreciated. You are admired. 
-And no matter how busy life gets, I will always be here cheering for you. 
-Now drink some water, relax your shoulders, and smile for me. 😌
-</p>
+<h1 class="big-title">Your Efforts Are Seen 👀💗</h1>
+<p>I see how hard you're working. I see your dedication. I see your strength.</p>
+<p class="highlight">You are doing amazing, even when you don’t notice it yourself.</p>
+</div>
 
-<p>
-Because my Chelly Rose deserves peace, happiness, and endless love. 🌹✨
-</p>
+<!-- PAGE 3 -->
+<div class="section">
+<h1 class="big-title">Daddy Is Proud Of You 🥹💖</h1>
+<p>You are strong. You are responsible. You are precious.</p>
+<p class="highlight">And Daddy is so, so proud of you.</p>
+</div>
+
+<!-- PAGE 4 -->
+<div class="section">
+<h1 class="big-title">Virtual Hug 🤗</h1>
+<p>If you’re tired right now… come here.</p>
+<p>Close your eyes and imagine me hugging you gently and telling you everything will be okay.</p>
+</div>
+
+<!-- PAGE 5 -->
+<div class="section">
+<h1 class="big-title">Why Are You So Cute?? 😏💕</h1>
+<p>How can someone work so hard and still glow like that?</p>
+<p>Chelly Rose… you’re unfairly adorable.</p>
+</div>
+
+<!-- PAGE 6 -->
+<div class="section">
+<h1 class="big-title">Reminder 💌</h1>
+<p>You deserve peace.</p>
+<p>You deserve happiness.</p>
+<p>You deserve love.</p>
+</div>
+
+<!-- PAGE 7 -->
+<div class="section">
+<h1 class="big-title">Drink Water 😌</h1>
+<p>Relax your shoulders.</p>
+<p>Take a deep breath.</p>
+<p>I’m always cheering for you.</p>
+</div>
+
+<!-- PAGE 8 -->
+<div class="section">
+<h1 class="big-title">You Matter 🌹</h1>
+<p>Your presence makes life softer and sweeter.</p>
+<p>The world is better with you in it.</p>
+</div>
+
+<!-- PAGE 9 -->
+<div class="section">
+<h1 class="big-title">My Favorite Person 💕</h1>
+<p>Out of everyone in this world… you’re my favorite.</p>
+<p>Always will be.</p>
+</div>
+
+<!-- PAGE 10 -->
+<div class="section">
+<div class="love-big">I LOVE YOU 💖</div>
+<p>More than yesterday.</p>
+<p>Less than tomorrow.</p>
 </div>
 
 <footer>
 Made with ❤️ by Daddy (Alle) — Just for Chelly Rose 🌹
-</footer>
-
-<script>
-function playVoice(){
-    document.getElementById("voiceNote").play();
-}
-</script>
-
-</body>
-</html>
-<footer>
-Made by Alle Hassan with love for Aliyah ❤️
 </footer>
 
 </body>
